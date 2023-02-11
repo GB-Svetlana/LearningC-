@@ -10,5 +10,5 @@ int[] randomArray = new int[lenArray];
 for (int i = 0; i < randomArray.Length; i++)
 {
     randomArray[i] = new Random().Next(1,20);
-    Console.Write(randomArray[i] + ", ");
+    Console.Write(randomArray[i] + " ");
 }

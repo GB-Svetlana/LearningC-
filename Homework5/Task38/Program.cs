@@ -9,21 +9,23 @@ Console.WriteLine(string.Join("  ", numbers));
 PrintArray(numbers);
 double min = Int32.MaxValue;
 double max = Int32.MinValue;
+double result = 0;
 
 for (int i = 0; i < numbers.Length; i++)
 {
     if (numbers[i] > max) max = numbers[i];
     if (numbers[i] < min)  min = numbers[i];
+    result = Math.Round((max - min), 2);
 }
 
 Console.WriteLine($"Максимальное значение = {max}, минимальное значение = {min}");
-Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
+Console.WriteLine($"Разница между максимальным и минимальным значением = {result}");
 
 void FillArrayRandomNumbers(double[] numbers)
 {
     for(int i = 0; i < numbers.Length; i++)
         {
-            numbers[i] = Convert.ToDouble(new Random().Next(100,1000)) / 100;
+            numbers[i] = Convert.ToDouble(new Random().Next(10,1000)) / 10;
         }
 }
 void PrintArray(double[] numbers)

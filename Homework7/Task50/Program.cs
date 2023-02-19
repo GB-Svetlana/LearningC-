@@ -8,7 +8,7 @@
 
 int rows = ReadInt("Введите индекс строки: ");
 int colums = ReadInt("Введите индекс столбца: ");
-int[,] numbers = new int[6, 8];
+int[,] numbers = new int[10, 10];
 FillArray(numbers);
 PrintArray(numbers);
 
